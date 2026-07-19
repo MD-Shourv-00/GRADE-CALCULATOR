@@ -1,0 +1,93 @@
+:root{
+    --button-color: #6460EA;
+    --background-color: #272D3D;
+    --container-color:#0C1826;
+    --white-color: #ffffff;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:monospace;
+}
+
+body{
+    background-color: var(--background-color);
+}
+/* ============== all common proparties start =============== */
+
+/* common button */
+.common_btn{
+    color: white;
+    background: var(--button-color);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid var(--button-color);
+    
+}
+
+.common_btn:hover{
+    transition: color 0.3s ease-out, background 0.3s ease-out;
+    color: var(--button-color);
+    background:white ;
+    border: 2px solid var(--button-color);
+}
+
+/* common-alignment */
+.common_alignment{
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+/* ============== all common proparties end =============== */
+
+/* header start */
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px 20px 100px;
+    
+}
+
+#header h2{
+    font-size:2.5rem;
+    color:var(--white-color);
+}
+#header li{
+    font-size:2rem;
+    color:var(--white-color);
+}
+#header h2 span{
+    color:var(--button-color);
+}
+
+#header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#header nav ul li{
+    list-style: none;
+}
+#header nav ul li a{
+    text-decoration: none;
+    all: unset; 
+    cursor: pointer;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid transparent ;
+}
+#header nav ul li a:hover{
+    border-bottom: 2px solid var(--button-color) ;
+    background-color: #6560ea3e;
+}
+#header nav ul li a:active{
+    color:var(--button-color);
+}
+/* header end */
