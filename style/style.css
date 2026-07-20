@@ -3,6 +3,7 @@
     --background-color: #272D3D;
     --container-color:#0C1826;
     --white-color: #ffffff;
+    --p-tag-color: rgba(239, 240, 240, 0.767);
 }
 
 *{
@@ -43,6 +44,11 @@ body{
 .common_alignment{
     max-width: 1300px;
     margin: 30px auto;
+}
+
+.section{
+    width: 100vw;
+    height: auto;
 }
 
 /* ============== all common proparties end =============== */
@@ -91,3 +97,35 @@ body{
     color:var(--button-color);
 }
 /* header end */
+
+/* hero section start */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0px 10%;
+}
+
+.container h1{
+    font-size: 5.5rem;
+    color: var(--white-color);
+    text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+    font-weight:800;
+}
+
+.container div{
+    max-width: 650px;
+    text-align: center;
+    margin-top: 10px;
+}
+.container div p{
+    font-size: 1.5rem;
+    color: var(--p-tag-color);
+    font-weight:600;
+    font-family: monospace;
+    
+}
+
+/* hero section end */
