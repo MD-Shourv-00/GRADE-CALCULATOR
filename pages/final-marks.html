@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Final Marks Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <header>
+        <h1><i class="fa-solid fa-calculator"></i>Final Marks Calculator</h1>
+    </header>
+    <section id="body">
+        <!-- left side -->
+        <div class="input_side">
+            <form>
+                <h2><i class="fa-solid fa-pen"></i>Input Your Marks</h2>
+
+                <label for="mid-term-marks">Mid-Term out of 100</label>
+                <input type="number" name="" id="mid-term-marks">
+
+                <label for="others-number">others out of 25</label>
+                <p>You have to predic others numebers out of 25. others means class test, presentation, attendence etc.</p>
+                <input type="number" name="" id="others-number">
+
+                <button class="submite-btn">Calculate</button>
+
+            </form>
+        </div>
+
+        <!-- right side -->
+        <div class="output_side">
+            <h1><i class="fa-solid fa-eye"></i> look Your Result</h1>
+            <!-- show the number user need to get in final.It wiil be look big -->
+            <p class="marks">0 Marks</p>
+            <!-- this massage complete 0 marks word -->
+            <p class="massage">need you for geting 80 marks or A+ in your Final Exam. Best of Luck!</p>
+        </div>
+    </section>
 </body>
 </html>
