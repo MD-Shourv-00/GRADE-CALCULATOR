@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* Brand Color Palette matching your Home Page */
+    --bg-main: #000000;          
+    --bg-surface: #111111;       
+    --primary-yellow: #FFF200;   
+    --pure-white: #FFFFFF;
+    --text-muted: #CCCCCC;
+    
+    /* Animation Curve */
+    --bounce-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--bg-main);
+    color: var(--pure-white);
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   🎬 KEYFRAMES & ENTRY ANIMATIONS
+   ========================================================= */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); text-shadow: 0 0 0px rgba(255, 242, 0, 0); }
+    50% { transform: scale(1.03); text-shadow: 0 0 15px rgba(255, 242, 0, 0.3); }
+    100% { transform: scale(1); text-shadow: 0 0 0px rgba(255, 242, 0, 0); }
+}
+
+/* =========================================================
+   🏗️ LAYOUT & STRUCTURE
+   ========================================================= */
+
+/* Header Matching Main Branding */
+.header {
+    width: 100%;
+    padding: 30px 10%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95) 70%, rgba(0,0,0,0));
+    border-bottom: 1px solid #222;
+    animation: fadeIn 0.6s ease forwards;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--pure-white);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header h1 i {
+    color: var(--primary-yellow);
+}
+
+nav{
+    margin: auto 0px;
+}
+#header nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#header nav ul li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pure-white);
+    padding: 6px 12px;
+    transition: var(--bounce-transition);
+}
+
+#header nav ul li a:hover {
+    background: var(--primary-yellow);
+    color: var(--bg-main);
+    transform: skewX(-10deg); 
+}
+
+#header nav ul li a:active {
+    background: var(--pure-white);
+    color: var(--bg-main);
+}
+
+/* Two-Column Main Layout Section */
+#body {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px);
+    padding: 60px 8%;
+    gap: 60px;
+    align-items: center;
+}
+
+/* =========================================================
+   ✍️ LEFT SIDE: INPUT SIDE
+   ========================================================= */
+.input_side {
+    flex: 1;
+    animation: slideUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.input_side form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_side h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.input_side h2 i {
+    color: var(--primary-yellow);
+}
+
+/* Form Controls */
+.input_side label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: var(--pure-white);
+}
+
+.input_side p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: -5px;
+    margin-bottom: 12px;
+    max-width: 90%;
+}
+
+.input_side input[type="number"] {
+    background: var(--bg-surface);
+    border: 2px solid #333;
+    padding: 16px;
+    color: var(--pure-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    outline: none;
+    transition: var(--bounce-transition);
+}
+
+.input_side input[type="number"]:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 4px 4px 0px 0px var(--primary-yellow);
+    transform: translate(-2px, -2px);
+}
+
+/* Brutalist Button Form Factor */
+.submite-btn {
+    display: inline-block;
+    align-self: flex-start;
+    color: var(--bg-main);
+    background: var(--primary-yellow);
+    border: 2px solid var(--primary-yellow);
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 16px 36px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: var(--bounce-transition);
+    box-shadow: 5px 5px 0px 0px var(--pure-white); 
+}
+
+.submite-btn:hover {
+    background: var(--bg-main);
+    color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
+    box-shadow: -5px -5px 0px 0px var(--primary-yellow);
+    transform: translate(5px, 5px);
+}
+
+.submite-btn:active {
+    transform: translate(0px, 0px);
+    box-shadow: 2px 2px 0px 0px var(--pure-white);
+}
+
+/* =========================================================
+   👁️ RIGHT SIDE: OUTPUT SIDE
+   ========================================================= */
+.output_side {
+    flex: 1;
+    background: var(--bg-surface);
+    border: 3px solid #222;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 10px 10px 0px 0px #1a1a1a;
+    
+    animation: slideUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: 0.2s;
+}
+
+.output_side h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.output_side h1 i {
+    color: var(--primary-yellow);
+}
+
+/* The Big Highlighted Result Number */
+.output_side .marks {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    line-height: 1;
+    color: var(--bg-main);
+    background: var(--primary-yellow);
+    padding: 10px 30px;
+    margin-bottom: 25px;
+    display: inline-block;
+    letter-spacing: -2px;
+    
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.output_side .massage {
+    font-size: 1.1rem;
+    color: var(--pure-white);
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+/* =========================================================
+   📱 RESPONSIVE MEDIA QUERIES (MOBILE OPTIMIZED)
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+    #body {
+        padding: 40px 5%;
+        gap: 40px;
+    }
+    
+    .output_side .marks {
+        font-size: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    header h1 {
+        justify-content: center;
+        font-size: 2rem;
+    }
+
+    #body {
+        flex-direction: column; /* Stack input and output vertically */
+        padding: 40px 24px;
+        gap: 50px;
+    }
+
+    .input_side, .output_side {
+        width: 100%;
+    }
+
+    .input_side h2 {
+        font-size: 2.2rem;
+        justify-content: center;
+    }
+
+    .submite-btn {
+        width: 100%; /* Full width action targets on mobile phones */
+        max-width: none;
+    }
+
+    .output_side {
+        padding: 40px 20px;
+    }
+    
+    .output_side h1 {
+        font-size: 1.8rem;
+        justify-content: center;
+    }
+}

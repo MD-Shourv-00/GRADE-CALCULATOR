@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Marks Calculator</title>
 
+    <link rel="stylesheet" href="../style/final-marks.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
+    <header class="header" id="header">
         <h1><i class="fa-solid fa-calculator"></i>Final Marks Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">SGPA-Calculator</a></li>
+            </ul>
+        </nav>
     </header>
     <section id="body">
         <!-- left side -->
@@ -18,14 +26,13 @@
                 <h2><i class="fa-solid fa-pen"></i>Input Your Marks</h2>
 
                 <label for="mid-term-marks">Mid-Term out of 100</label>
-                <input type="number" name="" id="mid-term-marks">
+                <input type="number" name="" min="0" max="100" id="mid-term-marks">
 
                 <label for="others-number">others out of 25</label>
-                <p>You have to predic others numebers out of 25. others means class test, presentation, attendence etc.</p>
-                <input type="number" name="" id="others-number">
+                <p>You have to predict others numeber out of 25. others like class tests, presentations, attendences etc.</p>
+                <input type="number" name="" min="0" max="100" id="others-number">
 
-                <button class="submite-btn">Calculate</button>
-
+                <div class="submite-btn">Calculate</div>
             </form>
         </div>
 
