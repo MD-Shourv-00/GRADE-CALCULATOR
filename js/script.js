@@ -32,7 +32,7 @@ submiteBtn.addEventListener('click', function(){
         if (
             (inputMidMarks === '' || inputOthersMarks === '') ||
             (inputMidMarks < 0 || inputMidMarks > 100) ||
-            (inputOthersMarks < 0 || inputOthersMarks > 25 || inputOthersMarks < )
+            (inputOthersMarks < 0 || inputOthersMarks > 25 )
         ) {
             for (let c of input) {
                 c.classList.add("input-required");
