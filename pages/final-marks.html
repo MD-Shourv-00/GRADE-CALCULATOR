@@ -26,13 +26,16 @@
                 <h2><i class="fa-solid fa-pen"></i>Input Your Marks</h2>
 
                 <label for="mid-term-marks">Mid-Term out of 100</label>
-                <input type="number" name="" min="0" max="100" id="mid-term-marks">
+                <p>You have to input one subject marks (20-100) at a time like ART or CSE or ENV or ENG marks</p>
+
+                <input type="number" value="" min="0" max="100" id="mid-term-marks" placeholder="Input Mid term marks">
 
                 <label for="others-number">others out of 25</label>
-                <p>You have to predict others numeber out of 25. others like class tests, presentations, attendences etc.</p>
-                <input type="number" name="" min="0" max="100" id="others-number">
+                <p>You have to predict others mark (10-25). others like class tests, presentations, attendences etc.</p>
+                <input type="number" value="" min="0" max="100" id="others-number" placeholder="Input others marks">
 
-                <div class="submite-btn">Calculate</div>
+                <div class="submite-btn">Calculate</div> 
+
             </form>
         </div>
 
@@ -40,10 +43,12 @@
         <div class="output_side">
             <h1><i class="fa-solid fa-eye"></i> look Your Result</h1>
             <!-- show the number user need to get in final.It wiil be look big -->
-            <p class="marks">0 Marks</p>
+            <p class="marks" id="show-marks">0 Marks</p>
             <!-- this massage complete 0 marks word -->
-            <p class="massage">need you for geting 80 marks or A+ in your Final Exam. Best of Luck!</p>
+            <p id="massage-output" class="massage"></p>
         </div>
     </section>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
