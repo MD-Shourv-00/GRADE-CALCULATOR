@@ -68,9 +68,6 @@ submiteBtn.addEventListener('click', function(){
 
     massageOutput.innerText = `need in final exam to get 80 marks or A+ in this subject. Best of Luck!`;
 
-    
-    
-
 })
 
 
